@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Newsreader');
+
+body {
+  font-family: 'Newsreader', serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px 0 30px 0;
+  font-style: italic;
+  font-weight: normal;
+  color: #888888;
+}
+
+h2 {
+  text-align: center;
+  margin: 40px 0 30px 0;
+  font-style: italic;
+  font-weight: normal;
+  color: #888888;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.intro > div + div {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid #888888;
+}
+
+.family-tree {
+  padding: 40px 20px;
+  overflow-x: scroll;
+}
+
+.family-tree ul {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+  flex-direction: row;
+  flex-shrink: content;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.family-tree li {
+  position: relative;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.family-tree li::before, .family-tree li::after {
+  content: "";
+  width: 50%;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 2px solid #000000;
+}
+
+.family-tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #000000;
+}
+
+.family-tree li:only-child::after, .family-tree li:only-child::before {
+  display: none;
+}
+
+.family-tree li:first-child::before, .family-tree li:last-child::after{
+  border: 0 none;
+}
+
+.family-tree li:last-child::before{
+  border-right: 2px solid #000000;
+}
+
+.family-tree ul ul::before{
+  content: '';
+  width: 0;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #000000;
+}
+
+.card {
+  padding: 10px 20px;
+}
+
+.family-tree .card + .card {
+  color: #888888;
+  font-style: italic;
+  padding-top: 0;
+}
+
+.family-tree .card + .card::before {
+  content: "&";
+}
+
+.info {
+  margin: 5px 0;
+  padding: 0;
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.info .label {
+  font-style: italic;
+}
+
+.info .label::after {
+  content: ".";
+  padding-right: 0.25em;
+}
