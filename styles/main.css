@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Newsreader', serif;
+  -webkit-text-size-adjust: none;
 }
 
 h1 {
