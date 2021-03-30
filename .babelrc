@@ -1,0 +1,9 @@
+{
+  "presets": ["@babel/preset-react"],
+  "plugins": [
+    [
+      "@babel/plugin-syntax-object-rest-spread",
+      {"useBuiltIns": true}
+    ]
+  ]
+}

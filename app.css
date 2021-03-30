@@ -21,6 +21,12 @@ h2 {
   color: #888888;
 }
 
+abbr {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+}
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -111,7 +117,7 @@ h2 {
 }
 
 .family-tree .card + .card::before {
-  content: "&";
+  content: "& ";
 }
 
 .info {
