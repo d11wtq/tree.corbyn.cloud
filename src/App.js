@@ -195,7 +195,7 @@ const RobertHenryCorbyn1886 = () => {
 
         <Node>
           <Person
-            name="Edgar Corbyn"
+            name="May Corbyn"
             birth="Jan-Mar 1931, Middlesbrough"
             death="Jan-Mar 1931, Middlesbrough"
           />
