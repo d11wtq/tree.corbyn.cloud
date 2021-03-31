@@ -56,7 +56,7 @@ const WilliamCorbyn1850 = () => {
         name="Sarah Ann Starling"
         birth="Apr-Jun 1853, Norfolk"
         marriage="Jul-Sep 1875, Newcastle"
-        death="Oct-Dec 1951, Middlesbrough (as Lipscombe)"
+        death="Oct-Dec 1941, Middlesbrough (as Lipscombe)"
       />
 
       <Tree>
