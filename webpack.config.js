@@ -16,7 +16,9 @@ module.exports = {
         'index.html',
       ),
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      verbose: true,
+    }),
   ],
   module: {
     rules: [
