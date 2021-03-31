@@ -3,10 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   target: 'web',
-  /* default mode to node env */
   mode: process.env.NODE_ENV || 'development',
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      filename: path.resolve(
+        __dirname,
+        'index.html',
+      ),
+    }),
   ],
   module: {
     rules: [
@@ -21,8 +25,9 @@ module.exports = {
     app: './src/bundle.js',
   },
   output: {
-    path: path.resolve(__dirname),
-    filename: '[name].js',
-    publicPath: '/',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    publicPath: 'dist',
+    clean: true,
   },
 };
