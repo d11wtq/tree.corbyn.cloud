@@ -11,7 +11,7 @@ const FamilyTree = ({children}) => {
       const computedStyle = getComputedStyle(element);
 
       element.scrollTo(
-        (element.scrollWidth / 2) - (parseInt(computedStyle.width) / 2),
+        (element.scrollWidth - parseInt(computedStyle.width)) / 2,
         0,
       );
     }

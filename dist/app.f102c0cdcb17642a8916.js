@@ -212,7 +212,7 @@ eval("const React = __webpack_require__(/*! react */ \"./node_modules/react/inde
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const React = ({\n  useRef,\n  useEffect\n} = __webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nconst FamilyTree = ({\n  children\n}) => {\n  const ref = useRef(null); // Scroll the tree to the center for initial display.\n\n  useEffect(() => {\n    const element = ref.current;\n\n    if (element && window && typeof window.getComputedStyle == 'function') {\n      const computedStyle = getComputedStyle(element);\n      element.scrollTo(element.scrollWidth / 2 - parseInt(computedStyle.width) / 2, 0);\n    }\n  });\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: \"family-tree\",\n    ref: ref\n  }, children);\n};\n\nmodule.exports = FamilyTree;\n\n//# sourceURL=webpack:///./src/FamilyTree.js?");
+eval("const React = ({\n  useRef,\n  useEffect\n} = __webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nconst FamilyTree = ({\n  children\n}) => {\n  const ref = useRef(null); // Scroll the tree to the center for initial display.\n\n  useEffect(() => {\n    const element = ref.current;\n\n    if (element && window && typeof window.getComputedStyle == 'function') {\n      const computedStyle = getComputedStyle(element);\n      element.scrollTo((element.scrollWidth - parseInt(computedStyle.width)) / 2, 0);\n    }\n  });\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: \"family-tree\",\n    ref: ref\n  }, children);\n};\n\nmodule.exports = FamilyTree;\n\n//# sourceURL=webpack:///./src/FamilyTree.js?");
 
 /***/ }),
 
