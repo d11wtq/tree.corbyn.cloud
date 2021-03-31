@@ -228,7 +228,7 @@ const MaryBrannigan1875 = () => {
   return (
     <Node>
       <Person
-        name="Mary Brannigan"
+        name="Mary Brannigan" // Registered as "Branagen"
         birth="Jan-Mar 1875, Blaina, Wales"
         death="Jul-Sep 1955, Middlesbrough"
       />
@@ -246,6 +246,13 @@ const MaryBrannigan1875 = () => {
             name="Mary Ann Dryden"
             birth="Apr-Jun 1899, Middlesbrough"
           />
+
+          {/*
+          <Person
+            name="Albert Campbell" // TODO: Confirm
+            birth="Jan-Mar 1922, Middlesbrough"
+          />
+          */}
         </Node>
 
         <Node>
@@ -269,6 +276,13 @@ const MaryBrannigan1875 = () => {
             name="John Dryden"
             birth="Oct-Dec 1904, Middlesbrough"
           />
+
+          {/*
+          <Person
+            name="Lillian Mann" // TODO: Confirm
+            birth="Oct-Dec 1919, Middlesbrough"
+          />
+          */}
         </Node>
 
         <Node>
@@ -276,6 +290,13 @@ const MaryBrannigan1875 = () => {
             name="Thomas Dryden"
             birth="Oct-Dec 1906, Middlesbrough"
           />
+
+          {/*
+          <Person
+            name="Florence List" // TODO: Confirm
+            birth="Oct-Dec 1934, Middlesbrough"
+          />
+          */}
         </Node>
 
         <JuliaDryden1909 />
@@ -333,6 +354,7 @@ const JuliaDryden1909 = () => {
 
           <Person
             name="Wilfred Hill"
+            // birth="Jan-Mar 1919, Middlesbrough" // TODO: Confirm
             marriage="Jul-Sep 1955, Middlesbrough"
           />
         </Node>
@@ -354,6 +376,7 @@ const JuliaDryden1909 = () => {
 
           <Person
             name="Edward Ferguson"
+            // birth="Jul-Sep 1930, Stockton" // TODO: Confirm
             marriage="Jan-Mar 1954, Middlesbrough"
           />
         </Node>
@@ -378,7 +401,7 @@ const JuliaDryden1909 = () => {
           />
 
           <Person
-            name="Maureen Williams"
+            name="Maureen Williams" // TODO: Confirm
             marriage="Apr-Jun 1962, Middlesbrough"
           />
         </Node>
@@ -391,6 +414,7 @@ const JuliaDryden1909 = () => {
 
           <Person
             name="Colin Ferguson"
+            // birth="Jan-Mar 1937, Middlesbrough" // TODO: Confirm
             marriage="Jul-Sep 1960, Middlesbrough"
           />
         </Node>
@@ -417,6 +441,7 @@ const JuliaDryden1909 = () => {
 
           <Person
             name="Thomas V Cave"
+            // birth="Apr-Jun 1945, Middlesbrough" // TODO: Confirm
             marriage="Oct-Dec 1966, Middlesbrough"
           />
         </Node>
