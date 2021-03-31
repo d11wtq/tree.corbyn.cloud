@@ -158,7 +158,7 @@ const RobertHenryCorbyn1886 = () => {
             name="Robert James Linklater"
             birth="Oct-Dec 1907, Middlesbrough"
             marriage="Oct-Dec 1933, Middlesbrough"
-            death=" Apr-Jun 1938, Middlesbrough"
+            death="Apr-Jun 1938, Middlesbrough"
           />
         </Node>
 
@@ -246,13 +246,6 @@ const MaryBrannigan1875 = () => {
             name="Mary Ann Dryden"
             birth="Apr-Jun 1899, Middlesbrough"
           />
-
-          {/*
-          <Person
-            name="Albert Campbell" // TODO: Confirm
-            birth="Jan-Mar 1922, Middlesbrough"
-          />
-          */}
         </Node>
 
         <Node>
@@ -276,13 +269,6 @@ const MaryBrannigan1875 = () => {
             name="John Dryden"
             birth="Oct-Dec 1904, Middlesbrough"
           />
-
-          {/*
-          <Person
-            name="Lillian Mann" // TODO: Confirm
-            birth="Oct-Dec 1919, Middlesbrough"
-          />
-          */}
         </Node>
 
         <Node>
@@ -290,13 +276,6 @@ const MaryBrannigan1875 = () => {
             name="Thomas Dryden"
             birth="Oct-Dec 1906, Middlesbrough"
           />
-
-          {/*
-          <Person
-            name="Florence List" // TODO: Confirm
-            birth="Oct-Dec 1934, Middlesbrough"
-          />
-          */}
         </Node>
 
         <JuliaDryden1909 />

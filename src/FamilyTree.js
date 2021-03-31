@@ -7,7 +7,7 @@ const FamilyTree = ({children}) => {
   useEffect(() => {
     const element = ref.current;
 
-    if (element && window && typeof window.getComputedStyle == 'function') {
+    if (element && typeof getComputedStyle == 'function') {
       const computedStyle = getComputedStyle(element);
 
       element.scrollTo(
