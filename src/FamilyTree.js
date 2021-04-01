@@ -1,22 +1,33 @@
 const React = {useRef, useEffect} = require('react');
 const {toPng} = require('html-to-image');
+const {FontAwesomeIcon: Icon} = require('@fortawesome/react-fontawesome');
+const {faDownload, faAlignCenter} = require('@fortawesome/free-solid-svg-icons');
 
 const FamilyTree = ({name, children}) => {
   const ref = useRef(null);
 
-  // Scroll the tree to the center for initial display.
-  useEffect(() => {
+  /**
+   * Center the tree within the viewport.
+   *
+   * This is useful when on a smaller screen and you don't know where you are.
+   */
+  const alignToCenter = () => {
     const element = ref.current;
 
     if (element && typeof getComputedStyle == 'function') {
       const computedStyle = getComputedStyle(element);
 
       element.scrollTo(
-        (element.scrollWidth - parseInt(computedStyle.width)) / 2,
-        0,
+        {
+          left: (element.scrollWidth - parseInt(computedStyle.width)) / 2,
+          behavior: 'smooth',
+        },
       );
     }
-  });
+  };
+
+  // Scroll the tree to the center for initial display.
+  useEffect(alignToCenter);
 
   /**
    * Handle downloading the tree as a PNG.
@@ -30,17 +41,19 @@ const FamilyTree = ({name, children}) => {
 
     if (element) {
       try {
-        const uri = (
-          await toPng(
-            element.firstChild,
-            {
-              pixelRatio: 3.0,
-              backgroundColor: 'rgba(255, 253, 247, 1.0)', // Pale yellow/sepia
-            },
-          )
-        ).replace(/^data:,/, 'data:image/png,');
+        // Generate a data: URI for the PNG.
+        const dataURI = await toPng(
+          element.firstChild,
+          {
+            pixelRatio: 3.0,
+            backgroundColor: 'rgba(255, 253, 247, 1.0)', // Pale yellow/sepia
+          },
+        );
 
-        alert(uri.substring(0,40));
+        // Some browsers (e.g. Mobile Safari) don't work.
+        if (!dataURI.startsWith('data:image/png')) {
+          throw new Error('Failed to generate PNG data');
+        }
 
         // In order to initiate a download, we fake clicking on a link.
         //
@@ -49,7 +62,16 @@ const FamilyTree = ({name, children}) => {
         const a = document.createElement('a');
 
         // Set the href to the data URI.
-        a.setAttribute('href', uri);
+        a.setAttribute(
+          'href',
+          await toPng(
+            element.firstChild,
+            {
+              pixelRatio: 3.0,
+              backgroundColor: 'rgba(255, 253, 247, 1.0)', // Pale yellow/sepia
+            },
+          ),
+        );
 
         a.setAttribute('type', 'image/png');
 
@@ -67,8 +89,15 @@ const FamilyTree = ({name, children}) => {
 
   return (
     <>
-      <div className="" onClick={downloadPng}>Download</div>
-      <div className="family-tree" ref={ref} onDoubleClick={downloadPng}>
+      <div className="toolbar">
+        <a href="javascript:;" onClick={downloadPng}>
+          <Icon icon={faDownload} /> Download
+        </a>
+        <a href="javascript:;" onClick={alignToCenter}>
+          <Icon icon={faAlignCenter} /> Re-center
+        </a>
+      </div>
+      <div className="family-tree" ref={ref}>
         <article>
           {children}
         </article>
