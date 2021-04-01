@@ -30,32 +30,26 @@ const FamilyTree = ({name, children}) => {
 
     if (element) {
       try {
-        // In order to initiate a download, we fake clicking on a link.
-        //
-        // The link element is garbage collected after use because it's never
-        // added to the DOM.
-        const a = document.createElement('a');
-        alert(
-          (await toPng(
-            element.firstChild,
-            {
-              pixelRatio: 3.0,
-              backgroundColor: 'rgba(255, 253, 247, 1.0)', // Pale yellow/sepia
-            },
-          )).substring(0, 40),
-        );
-
-        // Set the href to the data URI.
-        a.setAttribute(
-          'href',
+        const uri = (
           await toPng(
             element.firstChild,
             {
               pixelRatio: 3.0,
               backgroundColor: 'rgba(255, 253, 247, 1.0)', // Pale yellow/sepia
             },
-          ),
-        );
+          )
+        ).replace(/^data:,/, 'data:image/png,');
+
+        alert(uri.substring(0,40));
+
+        // In order to initiate a download, we fake clicking on a link.
+        //
+        // The link element is garbage collected after use because it's never
+        // added to the DOM.
+        const a = document.createElement('a');
+
+        // Set the href to the data URI.
+        a.setAttribute('href', uri);
 
         a.setAttribute('type', 'image/png');
 
