@@ -92,10 +92,10 @@ const FamilyTree = ({name, children}) => {
   return (
     <>
       <div className="toolbar">
-        <a href="javascript:;" onClick={downloadPng}>
+        <a onClick={downloadPng}>
           <Icon icon={faDownload} /> Download
         </a>
-        <a href="javascript:;" onClick={alignToCenter}>
+        <a onClick={alignToCenter}>
           <Icon icon={faAlignCenter} /> Re-center
         </a>
       </div>
