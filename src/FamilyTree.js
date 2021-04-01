@@ -61,11 +61,14 @@ const FamilyTree = ({name, children}) => {
   };
 
   return (
-    <div className="family-tree" ref={ref} onDoubleClick={downloadPng}>
-      <article>
-        {children}
-      </article>
-    </div>
+    <>
+      <div className="" onClick={downloadPng}>Download</div>
+      <div className="family-tree" ref={ref} onDoubleClick={downloadPng}>
+        <article>
+          {children}
+        </article>
+      </div>
+    </>
   );
 };
 
