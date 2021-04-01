@@ -35,6 +35,15 @@ const FamilyTree = ({name, children}) => {
         // The link element is garbage collected after use because it's never
         // added to the DOM.
         const a = document.createElement('a');
+        alert(
+          (await toPng(
+            element.firstChild,
+            {
+              pixelRatio: 3.0,
+              backgroundColor: 'rgba(255, 253, 247, 1.0)', // Pale yellow/sepia
+            },
+          )).substring(0, 40),
+        );
 
         // Set the href to the data URI.
         a.setAttribute(
@@ -47,6 +56,8 @@ const FamilyTree = ({name, children}) => {
             },
           ),
         );
+
+        a.setAttribute('type', 'image/png');
 
         // Set the download name on the link.
         a.setAttribute('download', `${name}.png`);
