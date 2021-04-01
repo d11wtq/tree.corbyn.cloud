@@ -48,8 +48,14 @@ abbr {
 }
 
 .family-tree {
-  padding: 40px 20px;
+  display: flex;
   overflow-x: scroll;
+}
+
+.family-tree > article {
+  display: flex;
+  flex-grow: 1;
+  padding: 30px 70px 70px 10px;
 }
 
 .family-tree ul {
