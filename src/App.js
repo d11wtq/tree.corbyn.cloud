@@ -25,7 +25,7 @@ const App = () => {
 
       <h2>From the perspective of William Corbyn, 1850</h2>
 
-      <FamilyTree>
+      <FamilyTree name="Family Tree of William Corbyn - 1850">
         <Tree>
           <WilliamCorbyn1850 />
         </Tree>
@@ -33,7 +33,7 @@ const App = () => {
 
       <h2>From the perspective of Mary Brannigan, 1875</h2>
 
-      <FamilyTree>
+      <FamilyTree name="Family Tree of Mary Brannigan - 1875">
         <Tree>
           <MaryBrannigan1875 />
         </Tree>

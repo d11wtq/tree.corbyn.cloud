@@ -1,7 +1,7 @@
 const React = {useRef, useEffect} = require('react');
 const {toPng} = require('html-to-image');
 
-const FamilyTree = ({children}) => {
+const FamilyTree = ({name, children}) => {
   const ref = useRef(null);
 
   // Scroll the tree to the center for initial display.
@@ -49,10 +49,7 @@ const FamilyTree = ({children}) => {
         );
 
         // Set the download name on the link.
-        a.setAttribute(
-          'download',
-          'family-tree.png',
-        );
+        a.setAttribute('download', `${name}.png`);
 
         a.click();
       } catch (e) {
