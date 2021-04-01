@@ -27,7 +27,9 @@ const FamilyTree = ({name, children}) => {
   };
 
   // Scroll the tree to the center for initial display.
-  useEffect(alignToCenter);
+  useEffect(() => {
+    setTimeout(alignToCenter, 250);
+  });
 
   /**
    * Handle downloading the tree as a PNG.
