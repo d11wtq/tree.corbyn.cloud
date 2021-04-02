@@ -31,11 +31,11 @@ const App = () => {
         </Tree>
       </FamilyTree>
 
-      <h2>From the perspective of Mary Brannigan, 1875</h2>
+      <h2>From the perspective of Bridget Sweeney</h2>
 
-      <FamilyTree name="Family Tree of Mary Brannigan - 1875">
+      <FamilyTree name="Family Tree of Bridget Sweeney - 1853">
         <Tree>
-          <MaryBrannigan1875 />
+          <BridgetSweeney1854 />
         </Tree>
       </FamilyTree>
     </main>
@@ -224,11 +224,112 @@ const WilliamACorbyn1928 = () => {
   );
 };
 
+const BridgetSweeney1854 = () => {
+  return (
+    <Node>
+      <Person
+        name="Bridget Sweeney"
+        birth="1854, Bandon, Ireland"
+      />
+
+      <Person
+        name="James Brannigan"
+        birth="1851, Drogheda, Ireland"
+        marriage="Jul-Sep 1872, Bedwellty, Wales"
+      />
+
+      <Tree>
+        <Node>
+          <Person
+            name="Hugh Brannigan" // As "Owen Bronigan" & "Sweeny"
+            birth="Apr-Jun 1873, Blaina, Wales"
+          />
+        </Node>
+
+        <MaryBrannigan1875 />
+
+        <Node>
+          <Person
+            name="John Brannigan" // As "Branaghan" & "Sweeny"
+            birth="Jan-Mar 1878, Blaina, Wales"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="James Brannigan" // As "Branagen" & "Sweney"
+            birth="Apr-Jun 1880, Brynmawr, Wales"
+            death="Jan-Mar 1882, Brynmawr, Wales"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Bridget Brannigan"
+            birth="Oct-Dec 1883, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Jane Brannigan"
+            birth="Jul-Sep 1885, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Margaret Brannigan"
+            birth="Jan-Mar 1887, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Jeremiah Brannigan"
+            birth="Jan-Mar 1889, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Thomas Brannigan"
+            birth="Apr-Jun 1890, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Annie Brannigan"
+            birth="Oct-Dec 1891, Middlesbrough"
+            death="Jul-Sep 1896, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Patrick Brannigan"
+            birth="Apr-Jun 1893, Middlesbrough"
+            death="Jul-Sep 1894, Middlesbrough"
+          />
+        </Node>
+
+        <Node>
+          <Person
+            name="Bartholomew Brannigan"
+            birth="Jul-Sep 1894, Middlesbrough"
+          />
+        </Node>
+      </Tree>
+    </Node>
+  );
+};
+
 const MaryBrannigan1875 = () => {
   return (
     <Node>
       <Person
-        name="Mary Brannigan" // Registered as "Branagen"
+        name="Mary Brannigan" // As "Branagen" & "Sweeny"
         birth="Jan-Mar 1875, Blaina, Wales"
         death="Jul-Sep 1955, Middlesbrough"
       />
