@@ -26,11 +26,6 @@ const FamilyTree = ({name, children}) => {
     }
   };
 
-  // Scroll the tree to the center for initial display.
-  useEffect(() => {
-    setTimeout(alignToCenter, 250);
-  });
-
   /**
    * Handle downloading the tree as a PNG.
    *
@@ -88,6 +83,11 @@ const FamilyTree = ({name, children}) => {
       }
     }
   };
+
+  // Scroll the tree to the center for initial display.
+  useEffect(() => {
+    setTimeout(alignToCenter, 250);
+  });
 
   return (
     <>

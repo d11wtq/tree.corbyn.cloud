@@ -31,11 +31,11 @@ const App = () => {
         </Tree>
       </FamilyTree>
 
-      <h2>From the perspective of Bridget Sweeney</h2>
+      <h2>From the perspective of Bridget Sweeney, 1853</h2>
 
       <FamilyTree name="Family Tree of Bridget Sweeney - 1853">
         <Tree>
-          <BridgetSweeney1854 />
+          <BridgetSweeney1853 />
         </Tree>
       </FamilyTree>
     </main>
@@ -224,17 +224,17 @@ const WilliamACorbyn1928 = () => {
   );
 };
 
-const BridgetSweeney1854 = () => {
+const BridgetSweeney1853 = () => {
   return (
     <Node>
       <Person
         name="Bridget Sweeney"
-        birth="1854, Bandon, Ireland"
+        birth="1853, Bandon, Ireland"
       />
 
       <Person
         name="James Brannigan"
-        birth="1851, Drogheda, Ireland"
+        birth="1850, Drogheda, Ireland"
         marriage="Jul-Sep 1872, Bedwellty, Wales"
       />
 
